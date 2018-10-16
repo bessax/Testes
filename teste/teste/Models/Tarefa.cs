@@ -6,8 +6,7 @@ namespace teste.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    // Classe Tarefa
-    public partial class Tarefa
+     public partial class Tarefa
     {
         public int Id { get; set; }
 
