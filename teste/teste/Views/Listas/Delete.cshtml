@@ -1,0 +1,32 @@
+﻿@model teste.Models.Lista
+
+@{
+    ViewBag.Title = "Excluir Lista";
+}
+
+<h2>[Delete]</h2>
+
+<h3>Realmente você deseja excluir esta lista?</h3>
+<div>
+    <h4>Lista</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-warning" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>
